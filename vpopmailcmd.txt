@@ -1,0 +1,17 @@
+- vadddomain
+- vdeldomain
+- vdominfo
+
+- vadduser
+- vdeluser
+- vpasswd
+
+vchangepw
+vchkpw
+vconfig
+vdeloldusers
+
+vipmap
+vkill
+vlist
+vuserinfo
