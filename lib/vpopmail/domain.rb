@@ -20,7 +20,7 @@ module Vpopmail
     # each hash contains :domain, :users (user number)
     def self.list(
       dominfo = Vpopmail::cmd("dominfo")
-      %x[dominfo]
+      %x["#{dominfo}"]
     end
 
   end
