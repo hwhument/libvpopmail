@@ -21,10 +21,29 @@ module Vpopmail
     def self.list
       dominfo = Vpopmail::cmd("vdominfo")
       output = system dominfo 
-      
+
+      arrdominfo = []
+      lastdom = {}
+
+      # splic output lines and extract usable info
+      arrlines = output.split /\n/
+      arrlines.each do |line|
+        line.chmop
+        if (dname = /^domain\:\s+(\w+)/.match(line)[1])
+          lastdom[:domain] = dname
+        end
+
+        if(lastdom[:domain] and usernum = /^users\:\s+(\d+)/.match(line)[1])
+          lastdom[:users] = usernum
+          arrdominfo << lastdom
+          lastdom = {}
+        end
+
+      end
+
       raise "error" unless $?.success?
 
-      output
+      arrdominfo
     end
 
   end
