@@ -12,6 +12,10 @@ test/tmp
 test/version_tmp
 tmp
 
+# rubymine
+.idea
+.idea/*
+
 # YARD artifacts
 .yardoc
 _yardoc
