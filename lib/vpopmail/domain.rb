@@ -19,10 +19,12 @@ module Vpopmail
     ## get all domain list in a array of hash
     # each hash contains :domain, :users (user number)
     def self.list
-      dominfo = Vpopmail::cmd("dominfo")
-      output = `#{dominfo}`
-      puts output
-      $?.success?
+      dominfo = Vpopmail::cmd("vdominfo")
+      output = system dominfo 
+      
+      raise "error" unless $?.success?
+
+      output
     end
 
   end

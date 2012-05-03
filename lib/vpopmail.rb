@@ -13,7 +13,7 @@ module Vpopmail
 
   ## list all available commands for vpopmail
   def self.known_cmds
-    %w(dominfo)
+    %w(vdominfo)
   end
 
   ## build the full path for a command
