@@ -1,3 +1,5 @@
+require "open3"
+
 # vpopmail is a wrapper for vpopmail command and common management operations
 #
 class Vpopmail
