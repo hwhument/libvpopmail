@@ -1,0 +1,160 @@
+domain: aozora-shouten.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/aozora-shouten.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: daijuseika.co.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/daijuseika.co.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: frash.co.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/frash.co.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: kokemori.co.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/kokemori.co.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: renard.co.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/renard.co.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: stern-chuo.co.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/stern-chuo.co.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: frash.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/frash.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: fukatsu21.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/fukatsu21.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: aushop.gr.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/aushop.gr.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: h2-l.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/h2-l.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: hanauranai.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/hanauranai.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: kan-sya.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/kan-sya.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: m2plus.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/m2plus.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: mizui.net
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/mizui.net
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: mail.mizui.net
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/mail.mizui.net
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: nonki.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/nonki.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: ondesign43.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/ondesign43.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: therapicotton.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/therapicotton.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: weandf.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/weandf.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
+domain: yuriya-gigli.jp
+uid:    899
+gid:    899
+dir:    /home/vpopmail/domains/yuriya-gigli.jp
+users:  0
+quota:  S=0,C=0
+usage:  0% (0 byte(s) in 0 file(s))
+
