@@ -1,4 +1,6 @@
 require_relative "lib/vpopmail"
 
 vp = Vpopmail.new()
-p vp.dominfo()
+
+info = vp.dominfo
+p vp.get_ml(info[1])

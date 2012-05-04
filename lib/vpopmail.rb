@@ -33,19 +33,66 @@ class Vpopmail
               lastdomain[md[1]] = md[2]
             end
           end
-
         end
       end
     rescue EOFError
       # ignore trivilal EOF error for command pipes
     end
-    rslt << lastdomain
+
+    # don't forget the last one
+    rslt << lastdomain if lastdomain.has_key?(:domain)
     rslt
   end
 
-  # find summary
-  def summary
+  # get all mailling list under a specific domain
+  def get_ml(dom)
+    alist = Array.new()
+    Dir.new(dom["dir"]).each do |f|
+      if md = /^\.qmail\-(.+)/.match(f)
+        alist << md[1] + '@' + d[:domain]
+      end
+    end
+    alist
+  end
 
+  # get all mail transfer information
+  def get_trans(dom)
+    tlist = Array.new()
+    Dir.new(dom["dir"]).each do |f|
+      abs = dom["dir"] + '/' + f
+      if File.directory?(abs)
+        Dir.new(abs).each do |inf|
+          # absinf = abs + '/' + inf
+          tlist << inf + '@' + dom[:domain]  if /^\.qmail$/.match(inf)
+        end
+      end
+    end
+    tlist
+  end
+
+  # find summary
+  # return format example:
+  #
+  # {
+  #   domains: 12
+  #   addrs: 88
+  #   mls: 20
+  # }
+  def summary
+    summary = Hash.new()
+
+    # get domain info using the vdominfo command
+    dinfo = dominfo()
+    summary["domains"] = dinfo.count()
+
+    summary["addrs"] = summary["mls"] = 0
+    info.each do |d|
+      summary["addrs"] = d["users"].to_i
+      mlist = get_ml(d)
+      summary["mls"] += mlist.count()
+    end
+
+    summary
   end
 
 end
