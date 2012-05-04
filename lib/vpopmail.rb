@@ -17,7 +17,7 @@ class Vpopmail
     lastdomain = Hash.new()
     begin
       # open a pipe for vpopmail build in vdominfo binarray
-      vdominfo_cmd = @dir + "vdominfo"
+      vdominfo_cmd = @dir + "bin/vdominfo"
       Open3.popen3( vdominfo_cmd ) do |i, o, e, t|
         while line = o.readline
           line.chomp
@@ -49,7 +49,7 @@ class Vpopmail
     alist = Array.new()
     Dir.new(dom["dir"]).each do |f|
       if md = /^\.qmail\-(.+)/.match(f)
-        alist << md[1] + '@' + d[:domain]
+        alist << md[1] + '@' + dom[:domain]
       end
     end
     alist
