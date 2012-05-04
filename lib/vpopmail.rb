@@ -122,26 +122,33 @@ class Vpopmail
 
     lastname = Hash.new()
     domlist.each do |d|
-      Open3.popen3( @dir + "bin/vuserinfo -D #{d[:domain]}" ) do |i, o, e, t|
-        while line = o.readline
-          line.chomp
-          if md = /^name:\s(.+)/.match(line)
-            if lastname.has_key?(:name)
-              rslt << lastname
-              lastname = Hash.new()
+      begin
+        Open3.popen3( @dir + "bin/vuserinfo -D #{d[:domain]}" ) do |i, o, e, t|
+          while line = o.readline
+            line.chomp
+            if md = /^name:\s(.+)/.match(line)
+              if lastname.has_key?(:name)
+                rslt << lastname
+                lastname = Hash.new()
+              end
+              lastname[:name] = md[1]
             end
-            lastname[:name] = md[1]
-          end
 
-          # only parse output for information under some domain
-          if lastname.has_key?(:name)
-            if md = /^(\w+):\s*(.+)/.match(line)
-              lastname[md[1]] = md[2]
+            # only parse output for information under some domain
+            if lastname.has_key?(:name)
+              if md = /^(\w+):\s*(.+)/.match(line)
+                lastname[md[1]] = md[2]
+              end
             end
           end
         end
+
+        rslt << lastname if lastname.has_key?(:name)
+      rescue EOFError
+
       end
-      rslt << lastname if lastname.has_key?(:name)
+
+
     end
 
     rslt
