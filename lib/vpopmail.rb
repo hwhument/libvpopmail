@@ -84,7 +84,8 @@ class Vpopmail
   # {
   #   domains: 12
   #   addrs: 88
-  #   mls: 20
+  #   mls: 20       # mailing list number
+  #   trans: 29     # number of mail addresses with transfer
   # }
   def summary
     summary = Hash.new()
@@ -93,13 +94,16 @@ class Vpopmail
     dinfo = dominfo()
     summary["domains"] = dinfo.count()
 
+    # initialize address and mailing list number to zero
     summary["addrs"] = summary["mls"] = 0
-    info.each do |d|
+    dinfo.each do |d|
       summary["addrs"] = d["users"].to_i
       mlist = get_ml(d)
+      tlist = get_trans(d)
       summary["mls"] += mlist.count()
+      summary["trans"] += tlist.count()
     end
-
+    
     summary
   end
 
