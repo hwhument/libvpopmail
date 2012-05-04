@@ -17,7 +17,8 @@ class Vpopmail
     lastdomain = Hash.new()
     begin
       # open a pipe for vpopmail build in vdominfo binarray
-      Open3.popen3( "/home/vpopmail/bin/vdominfo" ) do |i, o, e, t|
+      vdominfo_cmd = @dir + "vdominfo"
+      Open3.popen3( vdominfo_cmd ) do |i, o, e, t|
         while line = o.readline
           line.chomp
           if md = /^domain:\s(.+)/.match(line)
@@ -27,7 +28,7 @@ class Vpopmail
           end
 
           # only parse output for information under some domain
-          if lastdomain.hash_key?(:domain)
+          if lastdomain.has_key?(:domain)
             if md = /^(\w+):\s*(.+)/.match(line)
               lastdomain[md[1]] = md[2]
             end
@@ -43,5 +44,8 @@ class Vpopmail
   end
 
   # find summary
+  def summary
+
+  end
 
 end

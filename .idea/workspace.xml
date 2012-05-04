@@ -42,7 +42,7 @@
       <file leaf-file-name="vpopmail.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+            <state line="50" column="3" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.9311741">
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="111" />
-    <option name="y" value="18" />
+    <option name="x" value="329" />
+    <option name="y" value="12" />
     <option name="width" value="899" />
     <option name="height" value="659" />
   </component>
@@ -187,7 +187,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="111" y="18" width="899" height="659" extended-state="0" />
+    <frame x="329" y="12" width="899" height="659" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -311,7 +311,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+        <state line="50" column="3" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.9311741">
           <folding />
         </state>
       </provider>
