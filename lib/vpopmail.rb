@@ -10,6 +10,14 @@ class Vpopmail
     @dir = dir
   end
 
+  # create a domain hash from domain name has the same structure as dominfo() returns
+  def dhash(dname)
+    {
+      :domain => dname,
+      "dir" => @dir + '/' + dname
+    }
+  end
+
   # A command wrapper for
   # find domain info
   def dominfo
