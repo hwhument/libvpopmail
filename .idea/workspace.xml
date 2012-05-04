@@ -44,11 +44,23 @@
       <file leaf-file-name="vpopmail.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="24" selection-start="2513" selection-end="2513" vertical-scroll-proportion="0.41497976">
+            <state line="143" column="50" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.7728285">
               <folding>
+                <element signature="e#322#421#0" expanded="false" />
                 <element signature="e#171#232#0" expanded="false" />
-                <element signature="e#762#951#0" expanded="false" />
+                <element signature="e#1436#1629#0" expanded="false" />
+                <element signature="e#1735#2063#0" expanded="false" />
+                <element signature="e#2264#2750#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="open3.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prot/open3.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="7" selection-start="91" selection-end="211" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,7 +86,7 @@
       <file leaf-file-name="vpopmailcmd.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vpopmailcmd.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+            <state line="11" column="12" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,6 +103,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,12 +123,14 @@
         <option value="$PROJECT_DIR$/prot/find.rb" />
         <option value="$PROJECT_DIR$/info.txt" />
         <option value="$PROJECT_DIR$/load.rb" />
+        <option value="$PROJECT_DIR$/prot/open3.rb" />
         <option value="$PROJECT_DIR$/lib/vpopmail.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="425" />
+    <option name="x" value="381" />
+    <option name="y" value="68" />
     <option name="width" value="899" />
     <option name="height" value="659" />
   </component>
@@ -216,7 +235,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="425" y="0" width="899" height="659" extended-state="0" />
+    <frame x="381" y="68" width="899" height="659" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -319,11 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vpopmailcmd.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/info.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="8" selection-start="788" selection-end="804" vertical-scroll-proportion="0.0">
@@ -338,12 +352,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vpopmailcmd.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prot/open3.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="7" selection-start="91" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="24" selection-start="2513" selection-end="2513" vertical-scroll-proportion="0.41497976">
+        <state line="143" column="50" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.7728285">
           <folding>
+            <element signature="e#322#421#0" expanded="false" />
             <element signature="e#171#232#0" expanded="false" />
-            <element signature="e#762#951#0" expanded="false" />
+            <element signature="e#1436#1629#0" expanded="false" />
+            <element signature="e#1735#2063#0" expanded="false" />
+            <element signature="e#2264#2750#0" expanded="false" />
           </folding>
         </state>
       </provider>

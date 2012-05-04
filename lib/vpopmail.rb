@@ -64,6 +64,7 @@ class Vpopmail
   end
 
   # get all mail transfer information
+  # return a array of mail addresses with mail transfer enabled
   def get_trans(dom)
     tlist = Array.new()
     Dir.new(dom["dir"]).each do |f|
@@ -105,6 +106,45 @@ class Vpopmail
     end
 
     summary
+  end
+
+  # Get all email address list
+  # param: dom if a domain object specified, return list in the domain
+  def addr_list(dom = nil)
+    rslt = Array.new()
+    domlist = Array.new()
+
+    if dom
+      domlist << dom
+    else
+      domlist = dominfo()
+    end
+
+    lastname = Hash.new()
+    domlist.each do |d|
+      Open3.popen3( @dir + "bin/vuserinfo -D #{d[:domain]}" ) do |i, o, e, t|
+        while line = o.readline
+          line.chomp
+          if md = /^name:\s(.+)/.match(line)
+            if lastname.has_key?(:name)
+              rslt << lastname
+              lastname = Hash.new()
+            end
+            lastname[:name] = md[1]
+          end
+
+          # only parse output for information under some domain
+          if lastname.has_key?(:name)
+            if md = /^(\w+):\s*(.+)/.match(line)
+              lastname[md[1]] = md[2]
+            end
+          end
+        end
+      end
+      rslt << lastname if lastname.has_key?(:name)
+    end
+
+    rslt
   end
 
 end
