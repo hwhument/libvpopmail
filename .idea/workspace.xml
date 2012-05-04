@@ -41,10 +41,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="vpopmail.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="vpopmail.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="50" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.7728285">
+            <state line="143" column="50" selection-start="3698" selection-end="3698" vertical-scroll-proportion="-13.88">
               <folding>
                 <element signature="e#322#421#0" expanded="false" />
                 <element signature="e#171#232#0" expanded="false" />
@@ -56,19 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="open3.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prot/open3.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="7" selection-start="91" selection-end="211" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="load.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/load.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="1" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+            <state line="9" column="25" selection-start="196" selection-end="196" vertical-scroll-proportion="0.3097166">
               <folding />
             </state>
           </provider>
@@ -122,9 +113,9 @@
         <option value="$PROJECT_DIR$/spec/vpopmail_domain_spec.rb" />
         <option value="$PROJECT_DIR$/prot/find.rb" />
         <option value="$PROJECT_DIR$/info.txt" />
-        <option value="$PROJECT_DIR$/load.rb" />
         <option value="$PROJECT_DIR$/prot/open3.rb" />
         <option value="$PROJECT_DIR$/lib/vpopmail.rb" />
+        <option value="$PROJECT_DIR$/load.rb" />
       </list>
     </option>
   </component>
@@ -345,13 +336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/load.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vpopmailcmd.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="12" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
@@ -368,7 +352,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="50" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.7728285">
+        <state line="143" column="50" selection-start="3698" selection-end="3698" vertical-scroll-proportion="-13.88">
           <folding>
             <element signature="e#322#421#0" expanded="false" />
             <element signature="e#171#232#0" expanded="false" />
@@ -376,6 +360,13 @@
             <element signature="e#1735#2063#0" expanded="false" />
             <element signature="e#2264#2750#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="25" selection-start="196" selection-end="196" vertical-scroll-proportion="0.3097166">
+          <folding />
         </state>
       </provider>
     </entry>
