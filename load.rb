@@ -7,4 +7,4 @@ vp = Vpopmail.new()
 #p vp.get_trans(vp.dhash("aushop.gr.jp"))
 #p vp.summary()
 
-p vp.addr_list(vp.dhash["mizui.net"])
+p vp.addr_list(vp.dhash("mizui.net"))
