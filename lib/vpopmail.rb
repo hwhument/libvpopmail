@@ -27,7 +27,7 @@ class Vpopmail
           end
 
           # only parse output for information under some domain
-          if lastdomain.hash_key?(:domain)
+          if lastdomain.has_key?(:domain)
             if md = /^(\w+):\s*(.+)/.match(line)
               lastdomain[md[1]] = md[2]
             end
