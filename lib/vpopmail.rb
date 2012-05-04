@@ -71,7 +71,7 @@ class Vpopmail
       if File.directory?(abs)
         Dir.new(abs).each do |inf|
           # absinf = abs + '/' + inf
-          tlist << inf + '@' + dom[:domain]  if /^\.qmail$/.match(inf)
+          tlist << f + '@' + dom[:domain]  if /^\.qmail$/.match(inf)
         end
       end
     end
@@ -95,7 +95,7 @@ class Vpopmail
     summary["domains"] = dinfo.count()
 
     # initialize address and mailing list number to zero
-    summary["addrs"] = summary["mls"] = 0
+    summary["addrs"] = summary["mls"] = summary["trans"] = 0
     dinfo.each do |d|
       summary["addrs"] = d["users"].to_i
       mlist = get_ml(d)
@@ -103,7 +103,7 @@ class Vpopmail
       summary["mls"] += mlist.count()
       summary["trans"] += tlist.count()
     end
-    
+
     summary
   end
 
