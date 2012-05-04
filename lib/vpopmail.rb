@@ -14,7 +14,7 @@ class Vpopmail
   def dhash(dname)
     {
       :domain => dname,
-      "dir" => @dir + '/' + dname
+      "dir" => @dir + 'domains/' + dname
     }
   end
 
