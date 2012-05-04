@@ -44,7 +44,7 @@
       <file leaf-file-name="vpopmail.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="8" selection-start="3758" selection-end="3758" vertical-scroll-proportion="0.8550107">
+            <state line="138" column="30" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.565032">
               <folding>
                 <element signature="e#322#421#0" expanded="false" />
                 <element signature="e#171#232#0" expanded="false" />
@@ -359,7 +359,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="8" selection-start="3758" selection-end="3758" vertical-scroll-proportion="0.8550107">
+        <state line="138" column="30" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.565032">
           <folding>
             <element signature="e#322#421#0" expanded="false" />
             <element signature="e#171#232#0" expanded="false" />
