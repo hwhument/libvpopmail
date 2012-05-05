@@ -234,17 +234,21 @@ class Vpopmail
   # delete a vdomain
   def deldomain(domain) _run_cmd(@dir + "bin/vdeldomain #{domain}") end
 
-  # edit (add when it is not exists) mailing list: create a file inside the domain's directory
-  # and put the transfer email address inside
-  # param: ml is the full name of the email address such as 'god@heaven.com'
-  #        content is a text file contains email address each line, the heading & is optional
-  #        if `is_edit` set to true, raise error when the targeted mailing list file do not exists.
-  def editml(ml, content, is_edit = false)
+  # return the mailing list setup filename and contents of a mailing list
+  # return nil if mailing list file does not exists
+  # {
+  #   "file" => '/home/vpopmail/domains/mizui.net/.qmail-mlist',
+  #   "is_exists" => true,
+  #   "list" => ["huang@mizui.net", "wei@mizui.net", ...]
+  # }
+  #
+  #
+  def mlinfo(ml)
     # first, separate the domain name and ml name:
     name,dname = ml.split(/\@/)
     if dname.empty?
       @lasterr = "Error: invalid mailing list name."
-      return false
+      return nil
     end
 
     # check whether the domain is exists.
@@ -258,21 +262,53 @@ class Vpopmail
     # if no domain returned from dominfo, return error
     unless domain.has_key?(:domain)
       @lasterr = "Error: unknown domain #{dname}"
-      return false
+      return nil
     end
+
+    rslt = Hash.new()
 
     # cat the mailing list file, check it's status
     ml_file = domain["dir"] + "/.qmail-" + name
-    if is_edit and !File.exists?(ml_file)
-      @lasterr = "Error: mailing list file for #{ml} does not exists."
+    rslt["file"] = ml_file
+
+    rslt["is_exists"] = false
+    rslt["is_exists"] = true if File.exists?(ml_file)
+
+    # the array of email addresses get transferred by the mailing list
+    arr_list = Array.new()
+    # open the file and get the file contents
+    File.open(ml_file, "r") do |fh|
+      while ln = fh.gets()
+        ln.chomp
+        if md = /^\&(\.+\@\.+)/.match(ln)
+            arr_list << md[1]
+        end
+      end
+    end
+
+    rslt["list"] = arr_list
+    rslt
+  end
+
+  # edit (add when it is not exists) mailing list: create a file inside the domain's directory
+  # and put the transfer email address inside
+  # param: ml is the full name of the email address such as 'god@heaven.com'
+  #        content is a text file contains email address each line, the heading & is optional
+  #        if `is_edit` set to true, raise error when the targeted mailing list file do not exists.
+  def editml(ml, content, is_edit = false)
+
+    hmlinfo = mlinfo(ml)
+    return false unless hmlinfo
+
+    ml_file = hminfo["file"]
+    if is_edit and !File.exist?(ml_file)
+      @lasterr = "Error: mailing list #{ml} does not exists."
       return false
     end
 
-    # todo if the file exists, backup it first?
-
     # write contents to the file
     File.open(ml_file, "w") do |fh|
-      content.split(/\n/).each do |ln|
+      content.split(/\s*,\s*/).each do |ln|
         ln.chomp
         ln.gsub! /^\&/
         ln = "&" + ln if /\@/.match(ln)
@@ -283,30 +319,12 @@ class Vpopmail
     true
   end
 
+  # delete a mailing list setup file, but leave a backup
   def delml(ml)
-    # first, separate the domain name and ml name:
-    name,dname = ml.split(/\@/)
-    if dname.empty?
-      @lasterr = "Error: invalid mailing list name."
-      return false
-    end
+    hmlinfo = mlinfo(ml)
+    return false unless hmlinfo
 
-    # check whether the domain is exists.
-    domain = {}
-
-    # first get all domain list
-    dominfo.each do |d|
-      if d[:domain] == dname then domain = d end
-    end
-
-    # if no domain returned from dominfo, return error
-    unless domain.has_key?(:domain)
-      @lasterr = "Error: unknown domain #{dname}"
-      return false
-    end
-
-    # cat the mailing list file, check it's status
-    ml_file = domain["dir"] + "/.qmail-" + name
+    ml_file = hminfo["file"]
     unless File.exists?(ml_file)
       @lasterr = "Error: mailing list file for #{ml} does not exists."
       return false
@@ -316,5 +334,4 @@ class Vpopmail
     require 'fileutils'
     FileUtils.mv(ml_file, ml_backfile)
   end
-
 end

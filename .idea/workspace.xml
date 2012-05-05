@@ -44,7 +44,7 @@
       <file leaf-file-name="vpopmail.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="260" column="18" selection-start="6846" selection-end="6846" vertical-scroll-proportion="-19.04">
+            <state line="205" column="0" selection-start="4965" selection-end="4965" vertical-scroll-proportion="-16.88">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="load.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/load.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="385" selection-end="385" vertical-scroll-proportion="0.44041452">
+            <state line="2" column="10" selection-start="43" selection-end="43" vertical-scroll-proportion="0.06882591">
               <folding />
             </state>
           </provider>
@@ -81,16 +81,16 @@
         <option value="$PROJECT_DIR$/info.txt" />
         <option value="$PROJECT_DIR$/prot/open3.rb" />
         <option value="$PROJECT_DIR$/vpopmailcmd.txt" />
-        <option value="$PROJECT_DIR$/lib/vpopmail.rb" />
         <option value="$PROJECT_DIR$/load.rb" />
+        <option value="$PROJECT_DIR$/lib/vpopmail.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="403" />
+    <option name="y" value="17" />
+    <option name="width" value="899" />
+    <option name="height" value="659" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -133,20 +133,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="libvpopmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libvpopmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libvpopmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -193,14 +179,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="403" y="17" width="899" height="659" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12736923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2751196" sideWeight="0.49325627" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2751196" sideWeight="0.49325627" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -319,14 +305,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="18" selection-start="6846" selection-end="6846" vertical-scroll-proportion="-19.04">
+        <state line="205" column="0" selection-start="4965" selection-end="4965" vertical-scroll-proportion="-16.88">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/load.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="385" selection-end="385" vertical-scroll-proportion="0.44041452">
+        <state line="2" column="10" selection-start="43" selection-end="43" vertical-scroll-proportion="0.06882591">
           <folding />
         </state>
       </provider>
