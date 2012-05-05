@@ -204,7 +204,7 @@ class Vpopmail
       if s.success?
         return true
       else
-        @lasterr = se
+        @lasterr = se + so
         return false
       end
     rescue EOFError
