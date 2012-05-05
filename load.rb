@@ -12,5 +12,6 @@ vp = Vpopmail.new()
 #ret = vp.deluser("huangw2@mizui.net")
 #p vp.lasterr unless ret
 
-ret = vp.editml("sanny@mizui.net", "huang1@humentsoft.com\nhuangw2@humentsoft.com")
+ret = vp.editml("sanny@mizui.net", "huang1@humentsoft.com,huangw2@humentsoft.com,huangw@humentsoft.com")
+
 p vp.lasterr unless ret
