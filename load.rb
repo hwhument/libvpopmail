@@ -9,5 +9,5 @@ vp = Vpopmail.new()
 
 #p vp.addr_list(vp.dhash("mizui.net"))
 
-ret = vp.adduser("huangw2@mizui.net")
+ret = vp.adduser("huangw2@mizui.net", "sfdqwlxy")
 p vp.lasterr unless ret
