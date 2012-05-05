@@ -280,7 +280,7 @@ class Vpopmail
     File.open(ml_file, "r") do |fh|
       while ln = fh.gets()
         ln.chomp!
-        if md = /(.+)/.match(ln)
+        if md = /^\&(.+)/.match(ln)
             puts md.inspect
             arr_list << md[1]
         end
