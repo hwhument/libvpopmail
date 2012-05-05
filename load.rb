@@ -9,5 +9,8 @@ vp = Vpopmail.new()
 
 #p vp.addr_list(vp.dhash("mizui.net"))
 
-ret = vp.deluser("huangw2@mizui.net")
+#ret = vp.deluser("huangw2@mizui.net")
+#p vp.lasterr unless ret
+
+ret = vp.editml("sanny@mizui.net", "huang1@humentsoft.com\nhuangw2@humentsoft.com")
 p vp.lasterr unless ret

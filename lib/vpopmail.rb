@@ -199,6 +199,11 @@ class Vpopmail
   #
   #
   def _run_cmd(cmd)
+    if /[\\\|\&\;\>\<\#]/.match(cmd)
+      @lasterr = "Error: for security concerns, special characters like \\/|/&/;/</>/# are not allowed."
+      return false
+    end
+
     begin
       so, se, s = Open3.capture3(cmd)
       if s.success?
@@ -215,17 +220,101 @@ class Vpopmail
   # add a user address,
   # param: addr is the full address as 'name@domain.com'
   # this method merely wraps vpopmail's vadduser command and return what it returns when error occured.
-  def adduser(addr, pass)
-    _run_cmd(@dir + "bin/vadduser #{addr} #{pass}")
-  end
+  def adduser(addr, pass) _run_cmd(@dir + "bin/vadduser #{addr} #{pass}") end
 
   # delete a user address
-  def deluser(addr)
-    _run_cmd(@dir + "bin/vdeluser #{addr}")
+  def deluser(addr) _run_cmd(@dir + "bin/vdeluser #{addr}") end
+
+  # change user password
+  def chpass(addr, pass) _run_cmd(@dir + "bin/vpasswd #{addr} #{pass}") end
+
+  # add a vdomain
+  def adddomain(domain) _run_cmd(@dir + "bin/vadddomain #{domain}") end
+
+  # delete a vdomain
+  def deldomain(domain) _run_cmd(@dir + "bin/vdeldomain #{domain}") end
+
+  # edit (add when it is not exists) mailing list: create a file inside the domain's directory
+  # and put the transfer email address inside
+  # param: ml is the full name of the email address such as 'god@heaven.com'
+  #        content is a text file contains email address each line, the heading & is optional
+  #        if `is_edit` set to true, raise error when the targeted mailing list file do not exists.
+  def editml(ml, content, is_edit = false)
+    # first, separate the domain name and ml name:
+    name,dname = ml.split(/\@/)
+    if dname.empty?
+      @lasterr = "Error: invalid mailing list name."
+      return false
+    end
+
+    # check whether the domain is exists.
+    domain = {}
+
+    # first get all domain list
+    dominfo.each do |d|
+      if d[:domain] == dname then domain = d end
+    end
+
+    # if no domain returned from dominfo, return error
+    unless domain.has_key?(:domain)
+      @lasterr = "Error: unknown domain #{dname}"
+      return false
+    end
+
+    # cat the mailing list file, check it's status
+    ml_file = domain["dir"] + "/.qmail-" + name
+    if is_edit and !File.exists?(ml_file)
+      @lasterr = "Error: mailing list file for #{ml} does not exists."
+      return false
+    end
+
+    # todo if the file exists, backup it first?
+
+    # write contents to the file
+    File.open(ml_file, "w") do |fh|
+      content.split(/\n/).each do |ln|
+        ln.chomp
+        ln.gsub! /^\&/
+        ln = "&" + ln if /\@/.match(ln)
+        fh.write ln + "\n"
+      end
+    end
+
+    true
   end
 
-  # change user?
+  def delml(ml)
+    # first, separate the domain name and ml name:
+    name,dname = ml.split(/\@/)
+    if dname.empty?
+      @lasterr = "Error: invalid mailing list name."
+      return false
+    end
 
-  #
+    # check whether the domain is exists.
+    domain = {}
+
+    # first get all domain list
+    dominfo.each do |d|
+      if d[:domain] == dname then domain = d end
+    end
+
+    # if no domain returned from dominfo, return error
+    unless domain.has_key?(:domain)
+      @lasterr = "Error: unknown domain #{dname}"
+      return false
+    end
+
+    # cat the mailing list file, check it's status
+    ml_file = domain["dir"] + "/.qmail-" + name
+    unless File.exists?(ml_file)
+      @lasterr = "Error: mailing list file for #{ml} does not exists."
+      return false
+    end
+
+    ml_backfile = domain["dir"] + "/~.qmail-" + name + "~back~"
+    require 'fileutils'
+    FileUtils.mv(ml_file, ml_backfile)
+  end
 
 end
