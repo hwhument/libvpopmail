@@ -200,11 +200,11 @@ class Vpopmail
   #
   def _run_cmd(cmd)
     begin
-      i, o, s = Open3.capture3(cmd)
+      so, se, s = Open3.capture3(cmd)
       if s.success?
         return true
       else
-        @lasterr = o
+        @lasterr = se
         return false
       end
     rescue EOFError
@@ -220,7 +220,7 @@ class Vpopmail
   end
 
   # delete a user address
-  def adduser(addr)
+  def deluser(addr)
     _run_cmd(@dir + "bin/vdeluser #{addr}")
   end
 
