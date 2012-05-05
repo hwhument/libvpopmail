@@ -3,7 +3,7 @@ require "open3"
 # vpopmail is a wrapper for vpopmail command and common management operations
 #
 class Vpopmail
-  attr_reader :dir
+  attr_reader :dir, :lasterr
 
   # determine the vpopmail directory
   def initialize (dir = "/home/vpopmail/")
@@ -20,6 +20,16 @@ class Vpopmail
 
   # A command wrapper for
   # find domain info
+  # return a list of domain infomation like:
+  # [
+  #   {
+  #      :domain => 'frash.co.jp',
+  #      'dir' => '/home/vpopmail/domains/frash.co.jp',
+  #      'users' => 18,
+  #      ...
+  #    }
+  #   ...
+  # ]
   def dominfo
     rslt = Array.new()
     lastdomain = Hash.new()
@@ -52,12 +62,33 @@ class Vpopmail
     rslt
   end
 
+  ## get a list of available domains
+  def domlist
+    rslt = Array.new()
+    dominfo.each do |d|
+      rslt << d[:domain]
+    end
+    rslt
+  end
+
   # get all mailling list under a specific domain
-  def get_ml(dom)
+  def ml_list(dom = nil)
     alist = Array.new()
-    Dir.new(dom["dir"]).each do |f|
-      if md = /^\.qmail\-(.+)/.match(f)
-        alist << md[1] + '@' + dom[:domain]
+
+    # build domain list, if parameter is empty, get all domain first
+    domlist = Array.new()
+    if dom
+      domlist << dom
+    else
+      domlist = dominfo()
+    end
+
+    # for each domain, find .qmail-ml name inside it's directory
+    domlist.each do |d|
+      Dir.new(d["dir"]).each do |f|
+        if md = /^\.qmail\-(.+)/.match(f)
+          alist << md[1] + '@' + d[:domain]
+        end
       end
     end
     alist
@@ -65,17 +96,29 @@ class Vpopmail
 
   # get all mail transfer information
   # return a array of mail addresses with mail transfer enabled
-  def get_trans(dom)
+  def trans_list(dom = nil)
     tlist = Array.new()
-    Dir.new(dom["dir"]).each do |f|
-      abs = dom["dir"] + '/' + f
-      if File.directory?(abs)
-        Dir.new(abs).each do |inf|
-          # absinf = abs + '/' + inf
-          tlist << f + '@' + dom[:domain]  if /^\.qmail$/.match(inf)
+
+    # build domain list, if parameter is empty, get all domain first
+    domlist = Array.new()
+    if dom
+      domlist << dom
+    else
+      domlist = dominfo()
+    end
+
+    domlist.each do |d|
+      Dir.new(d["dir"]).each do |f|
+        abs = d["dir"] + '/' + f
+        if File.directory?(abs)
+          Dir.new(abs).each do |inf|
+            # absinf = abs + '/' + inf
+            tlist << f + '@' + d[:domain]  if /^\.qmail$/.match(inf)
+          end
         end
       end
     end
+
     tlist
   end
 
@@ -145,13 +188,44 @@ class Vpopmail
 
         rslt << lastname if lastname.has_key?(:name)
       rescue EOFError
-
+        # do nothing for eof error (because this is always happen as a pipe)
       end
-
-
     end
 
     rslt
   end
+
+  ##
+  #
+  #
+  def _run_cmd(cmd)
+    begin
+      i, o, s = Open3.capture3(cmd)
+      if s.success?
+        return true
+      else
+        @lasterr = o
+        return false
+      end
+    rescue EOFError
+      # do nothing for eof error (because this is always happen as a pipe)
+    end
+  end
+
+  # add a user address,
+  # param: addr is the full address as 'name@domain.com'
+  # this method merely wraps vpopmail's vadduser command and return what it returns when error occured.
+  def adduser(addr, pass)
+    _run_cmd(@dir + "bin/vadduser #{addr} #{pass}")
+  end
+
+  # delete a user address
+  def adduser(addr)
+    _run_cmd(@dir + "bin/vdeluser #{addr}")
+  end
+
+  # change user?
+
+  #
 
 end

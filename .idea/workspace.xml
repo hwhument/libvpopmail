@@ -41,25 +41,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="vpopmail.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="vpopmail.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="30" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.565032">
+            <state line="228" column="3" selection-start="5443" selection-end="5443" vertical-scroll-proportion="-18.76">
               <folding>
-                <element signature="e#322#421#0" expanded="false" />
-                <element signature="e#171#232#0" expanded="false" />
-                <element signature="e#1436#1629#0" expanded="false" />
-                <element signature="e#1735#2063#0" expanded="false" />
-                <element signature="e#2264#2750#0" expanded="false" />
+                <element signature="e#332#431#0" expanded="false" />
+                <element signature="e#694#1604#0" expanded="false" />
+                <element signature="e#1645#1751#0" expanded="false" />
+                <element signature="e#3139#3625#0" expanded="false" />
+                <element signature="e#4093#4312#0" expanded="false" />
+                <element signature="e#4392#4548#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="load.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/load.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="36" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+            <state line="12" column="23" selection-start="274" selection-end="274" vertical-scroll-proportion="0.3523316">
               <folding />
             </state>
           </provider>
@@ -114,16 +115,16 @@
         <option value="$PROJECT_DIR$/prot/find.rb" />
         <option value="$PROJECT_DIR$/info.txt" />
         <option value="$PROJECT_DIR$/prot/open3.rb" />
-        <option value="$PROJECT_DIR$/load.rb" />
         <option value="$PROJECT_DIR$/lib/vpopmail.rb" />
+        <option value="$PROJECT_DIR$/load.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="381" />
-    <option name="y" value="68" />
-    <option name="width" value="899" />
-    <option name="height" value="659" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -226,14 +227,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="381" y="68" width="899" height="659" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20095694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12736923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -345,28 +346,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prot/open3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="91" selection-end="211" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/load.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+        <state line="3" column="63" selection-start="25" selection-end="86" vertical-scroll-proportion="0.10759494">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/vpopmail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="30" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.565032">
+        <state line="228" column="3" selection-start="5443" selection-end="5443" vertical-scroll-proportion="-18.76">
           <folding>
-            <element signature="e#322#421#0" expanded="false" />
-            <element signature="e#171#232#0" expanded="false" />
-            <element signature="e#1436#1629#0" expanded="false" />
-            <element signature="e#1735#2063#0" expanded="false" />
-            <element signature="e#2264#2750#0" expanded="false" />
+            <element signature="e#332#431#0" expanded="false" />
+            <element signature="e#694#1604#0" expanded="false" />
+            <element signature="e#1645#1751#0" expanded="false" />
+            <element signature="e#3139#3625#0" expanded="false" />
+            <element signature="e#4093#4312#0" expanded="false" />
+            <element signature="e#4392#4548#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="274" selection-end="274" vertical-scroll-proportion="0.3523316">
+          <folding />
         </state>
       </provider>
     </entry>
