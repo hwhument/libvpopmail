@@ -277,8 +277,10 @@ class Vpopmail
     # the array of email addresses get transferred by the mailing list
     arr_list = Array.new()
     # open the file and get the file contents
+    puts ml_file
     File.open(ml_file, "r") do |fh|
       while ln = fh.gets()
+        puts ln
         ln.chomp
         if md = /^\&(\.+\@\.+)/.match(ln)
             arr_list << md[1]
