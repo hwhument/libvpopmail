@@ -300,7 +300,7 @@ class Vpopmail
     hmlinfo = mlinfo(ml)
     return false unless hmlinfo
 
-    ml_file = hminfo["file"]
+    ml_file = hmlinfo["file"]
     if is_edit and !File.exist?(ml_file)
       @lasterr = "Error: mailing list #{ml} does not exists."
       return false
@@ -324,7 +324,7 @@ class Vpopmail
     hmlinfo = mlinfo(ml)
     return false unless hmlinfo
 
-    ml_file = hminfo["file"]
+    ml_file = hmlinfo["file"]
     unless File.exists?(ml_file)
       @lasterr = "Error: mailing list file for #{ml} does not exists."
       return false
