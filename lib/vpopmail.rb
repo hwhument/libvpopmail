@@ -142,8 +142,8 @@ class Vpopmail
     summary["addrs"] = summary["mls"] = summary["trans"] = 0
     dinfo.each do |d|
       summary["addrs"] += d["users"].to_i
-      mlist = get_ml(d)
-      tlist = get_trans(d)
+      mlist = ml_list(d)
+      tlist = trans_list(d)
       summary["mls"] += mlist.count()
       summary["trans"] += tlist.count()
     end
